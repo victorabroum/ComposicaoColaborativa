@@ -188,8 +188,8 @@ public class SonsActivity extends AppCompatActivity implements com.google.androi
                         try {
                             float raio = (float) response.getDouble("Raio");
                             ambiente = new Ambiente(response.getInt("Id"), response.getString("Descricao"),
-                                    response.getDouble("Longitude"), response.getDouble("Latitude"),
-                                    raio, response.getInt("Pessoas"));
+                                    response.getDouble("LongitudeA"), response.getDouble("LatitudeA"),
+                                    latitudeB, longitudeB, latitudeC, longitudeC, raio, response.getInt("Pessoas"));
                             Log.i("GetAmbienteAll", "Raio: " + ambiente.getRaio());
                         } catch (JSONException e) {
                             e.printStackTrace();
