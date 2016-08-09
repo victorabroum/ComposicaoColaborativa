@@ -128,6 +128,9 @@ public class SonsActivity extends AppCompatActivity implements com.google.androi
         }
 
         float vetor[] = new float[3];
+        float vetorB[] = new float[3];
+        float vetorC[] = new float[3];
+        float vetorD[] = new float[3];
 
         //Função para saber a distancia
         Location.distanceBetween(ambiente.getLatitude(), ambiente.getLongitude(),
@@ -189,7 +192,9 @@ public class SonsActivity extends AppCompatActivity implements com.google.androi
                             float raio = (float) response.getDouble("Raio");
                             ambiente = new Ambiente(response.getInt("Id"), response.getString("Descricao"),
                                     response.getDouble("LongitudeA"), response.getDouble("LatitudeA"),
-                                    latitudeB, longitudeB, latitudeC, longitudeC, raio, response.getInt("Pessoas"));
+                                    response.getDouble("LongitudeB"), response.getDouble("LongitudeB"),
+                                    response.getDouble("LatitudeC"), response.getDouble("LongitudeC"),
+                                    raio, response.getInt("Pessoas"));
                             Log.i("GetAmbienteAll", "Raio: " + ambiente.getRaio());
                         } catch (JSONException e) {
                             e.printStackTrace();
