@@ -128,9 +128,6 @@ public class SonsActivity extends AppCompatActivity implements com.google.androi
         }
 
         float vetor[] = new float[3];
-        float vetorB[] = new float[3];
-        float vetorC[] = new float[3];
-        float vetorD[] = new float[3];
 
         //Função para saber a distancia
         Location.distanceBetween(ambiente.getLatitude(), ambiente.getLongitude(),
